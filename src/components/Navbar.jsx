@@ -1,6 +1,7 @@
 import React from 'react'
 import { useEffect } from 'react';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function Navbar() {
 
@@ -36,14 +37,14 @@ function Navbar() {
         }
     })
     const navItems = (<>
-        <li><a href="/">Home</a></li>
-        <li><a href="/course">Courses</a></li>
-        <li><a>About</a></li>
-        <li><a>Contact</a></li>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/course">Courses</Link></li>
+        <li><Link to="/about">About</Link></li>
+        <li><Link to="/contact">Contact</Link></li>
     </>);
   return (
     <>
-      <div className={`max-w-screen-2xl container mx-auto md:px-20 px-4 dark:bg-slate-900 dark:text-white fixed top-0 left-0 right-0 ${sticky ? "sticky-nabar shadow-md bg-base-200 duration-300 transition-all ease-in-out z-50 dark:bg-slate-600 dark:text-white" : ""}`}>
+      <div className={`md:px-64 px-4 dark:bg-slate-900 dark:text-white fixed top-0 left-0 right-0 ${sticky ? "sticky-navbar shadow-md bg-base-200 duration-300 transition-all ease-in-out z-50 dark:bg-slate-600 dark:text-white" : ""}`}>
         <div className="navbar">
             <div className="navbar-start">
                 <div className="dropdown">
@@ -83,7 +84,7 @@ function Navbar() {
                     </label>
                 </div>
                 <div className="">
-                    <a className="bg-black text-white px-3 py-2 rounded-md hover:bg-slate-800 duration-300 cursor-pointer">Login</a>
+                    <a className="bg-black text-white px-3 py-2 rounded-md hover:bg-slate-800 duration-300 cursor-pointer dark:bg-indigo-500 dark:text-white">Login</a>
                 </div>
                 
             </div>
