@@ -15,7 +15,7 @@ function Coursecards({item}) {
                     <p>{item.title}</p>
                     <div className="card-actions justify-between items-center">
                     <div className="badge badge-outline">{item.price}</div> 
-                    <div className="btn btn-outline">Buy Now</div>
+                    <div className="btn btn-outline dark:bg-indigo-500 dark:text-white dark:border-none">Buy Now</div>
                     </div>
                 </div>
             </div>
