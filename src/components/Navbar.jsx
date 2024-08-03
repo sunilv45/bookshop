@@ -2,6 +2,7 @@ import React from 'react'
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Login from './Login';
 
 function Navbar() {
 
@@ -55,7 +56,7 @@ function Navbar() {
                     {navItems}
                 </ul>
                 </div>
-                <a className="text-2xl font-bold cursor-pointer">Bookshop</a>
+                <Link to="/"><div className="text-2xl font-bold cursor-pointer">Bookshop</div></Link>
             </div>
             <div className="navbar-end">
                 <div className="navbar-center hidden lg:flex">
@@ -84,7 +85,8 @@ function Navbar() {
                     </label>
                 </div>
                 <div className="">
-                    <a className="bg-black text-white px-3 py-2 rounded-md hover:bg-slate-800 duration-300 cursor-pointer dark:bg-indigo-500 dark:text-white">Login</a>
+                    <a className="bg-black text-white px-3 py-2 rounded-md hover:bg-slate-800 duration-300 cursor-pointer dark:bg-indigo-500 dark:text-white" onClick={()=>document.getElementById("my_modal_3").showModal()}>Login</a>
+                    <Login/>
                 </div>
                 
             </div>
